@@ -1,0 +1,72 @@
+/* ---------------------------------------
+   Disney+ Inspired Jellyfin Theme
+   Base: Zombie Release + Disney Scheme
+   Compatible with Jellyfin 10.11.2
+---------------------------------------- */
+
+/* Base Zombie Release theme */
+@import url("https://cdn.jsdelivr.net/gh/MakD/zombie-release@latest/theme.css");
+
+/* Disney color scheme overlay */
+@import url("https://cdn.jsdelivr.net/gh/MakD/zombie-release@latest/color-schemes/disney.css");
+
+/* Disney+ global background gradient */
+body {
+    background: linear-gradient(to bottom, #0d1b2a 0%, #000814 100%) !important;
+}
+
+/* Disney+ Card Hover Scaling */
+.card,
+.poster-card,
+.emby-scroller .itemsContainer .card {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover,
+.poster-card:hover,
+.emby-scroller .itemsContainer .card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    z-index: 5;
+}
+
+/* Disney+ Row Spacing + Soft Rounding */
+.itemsContainer {
+    padding-top: 1rem !important;
+    padding-bottom: 1.8rem !important;
+}
+
+.itemsContainer > div {
+    border-radius: 12px !important;
+}
+
+/* Disney+ Navigation Bar Styling */
+.headerTop {
+    background: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(8px);
+}
+
+.headerTop .headerTabButton {
+    padding: 0 1.2rem !important;
+    font-size: 1.05rem !important;
+}
+
+.headerButton:hover {
+    color: #1f80e0 !important;
+}
+
+/* Disney+ Style Studio-Hub Tiles */
+.studioTile {
+    height: 120px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 1rem;
+    filter: brightness(0.85);
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.studioTile:hover {
+    filter: brightness(1);
+    transform: scale(1.04);
+}
